@@ -1,0 +1,8 @@
+CREATE TABLE products (id INTEGER, name TEXT, price INTEGER, Release_date INTEGER, Quantity INTEGER);
+INSERT INTO products VALUES (1, "Serenity", "12.99", 2006, 5);
+INSERT INTO products VALUES (2, "Back To The Future", "9.99", 1985, 5);
+INSERT INTO products VALUES (3, "The Court Jester", "5.99", 1958, 2);
+INSERT INTO products VALUES (4, "Spiderman: No Way Home", "23.99", 2021, 8);
+INSERT INTO products VALUES (5, "Avengers: Endgame", "19.99", 2018, 7);
+
+SELECT price*quantity AS "total price", name, release_date, price FROM products ORDER BY price ASC;
