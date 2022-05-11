@@ -22,4 +22,8 @@ INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALU
 INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (2, 2, "Toy Story 3", 2010, 200000000, 866970811);
 INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (3, 3, "The Dark Knight Rises", 2012, 250000000, 831153097);
 
-Select * from Movies;
+Select a.first_name, a.last_name, m.title, m.return 
+    from actors AS a
+    join movies AS m
+    on a.star_id = m.star_id
+    ORDER BY m.return DESC;
