@@ -8,6 +8,19 @@ CREATE TABLE actors (
 INSERT INTO actors (first_name, last_name) Values ("Nicolas", "Cage");
 INSERT INTO actors (first_name, last_name) Values ("Tom", "Hanks");
 INSERT INTO actors (first_name, last_name) Values ("Liam", "Neeson");
+INSERT INTO actors (first_name, last_name) Values ("Brad", "Pitt");
+INSERT INTO actors (first_name, last_name) Values ("Matt", "Damon");
+INSERT INTO actors (first_name, last_name) Values ("Samuel L", "Jackson");
+INSERT INTO actors (first_name, last_name) Values ("Bruce", "Willis");
+INSERT INTO actors (first_name, last_name) Values ("Robert", "Downey Jr.");
+INSERT INTO actors (first_name, last_name) Values ("Arnold", "Schwarzenegger");
+INSERT INTO actors (first_name, last_name) Values ("Tom", "Cruise");
+INSERT INTO actors (first_name, last_name) Values ("Chris", "Pratt");
+INSERT INTO actors (first_name, last_name) Values ("Chuck", "Norris");
+INSERT INTO actors (first_name, last_name) Values ("Bruce", "Lee");
+INSERT INTO actors (first_name, last_name) Values ("Henry", "Cavill");
+INSERT INTO actors (first_name, last_name) Values ("Ryan", "Reynolds");
+INSERT INTO actors (first_name, last_name) Values ("Nathan", "Fillion");
 
 CREATE TABLE movies (
     movie_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -21,6 +34,19 @@ CREATE TABLE movies (
 INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (1, 1, "National Treasure:Book of Secrets", 2007, 130000000, 329242249);
 INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (2, 2, "Toy Story 3", 2010, 200000000, 866970811);
 INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (3, 3, "The Dark Knight Rises", 2012, 250000000, 831153097);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (4, 4, "World War Z", 2013, 190000000, 350455876);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (5, 5, "Interstellar", 2014, 165000000, 536729206);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (6, 6, "Avengers: Endgame", 2019, 356000000, 2441501328);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (7, 7, "The Sixth Sense", 1999, 40000000, 632806432);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (8, 8, "Avengers: Endgame", 2019, 356000000, 2441501328);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (9, 9, "Terminator 2: Judgement Day", 1991, 102000000, 418881154);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (10, 10, "Mission Impossible: Fallout", 2018, 178000000, 613657398);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (11, 11, "Avengers: Infinity War", 2018, 321000000, 1727359754);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (12, 12, "Missing in Action", 1984, 2550000, 20262411);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (13, 13, "Enter The Dragon", 1973, 850000, 114150000);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (14, 14, "Batman V Superman: Dawn of Justice", 2016, 300000, 572700000);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (15, 15, "Deadpool", 2016, 58000000, 725100000);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (16, 16, "Saving Private Ryan", 1998, 70000000, 412349603);
 
 Select a.first_name, a.last_name, m.title, m.return 
     from actors AS a
