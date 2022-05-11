@@ -1,0 +1,25 @@
+/* Create table about the people and what they do here */
+CREATE TABLE actors (
+    star_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT,
+    last_name TEXT
+);
+    
+INSERT INTO actors (first_name, last_name) Values ("Nicolas", "Cage");
+INSERT INTO actors (first_name, last_name) Values ("Tom", "Hanks");
+INSERT INTO actors (first_name, last_name) Values ("Liam", "Neeson");
+
+CREATE TABLE movies (
+    movie_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    star_id INTEGER,
+    title TEXT,
+    release_date INTEGER,
+    budget INTEGER,
+    return INTEGER
+);
+
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (1, 1, "National Treasure:Book of Secrets", 2007, 130000000, 329242249);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (2, 2, "Toy Story 3", 2010, 200000000, 866970811);
+INSERT INTO movies (movie_id, star_id, title, release_date, budget, return) VALUES (3, 3, "The Dark Knight Rises", 2012, 250000000, 831153097);
+
+Select * from Movies;
