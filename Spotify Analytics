@@ -49,3 +49,11 @@ artist_name AS Artist
 ,avg(energy) AS Energy
 FROM BIT_DB.spotifydata
 GROUP BY artist_name, track_name
+
+#I was also curious about track length, so I determined the duration of each song
+SELECT artist_name AS 'Artist', track_name AS 'Title', (duration_ms/1000) AS Seconds
+FROM BIT_DB.Spotifydata
+
+#and the the average duration of each song
+SELECT AVG(duration_ms/1000) AS Runtime
+FROM BIT_DB.Spotifydata
