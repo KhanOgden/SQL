@@ -1,0 +1,74 @@
+/*Locating the crime scene report*/
+Select *
+FROM crime_scene_report
+Where city LIKE '%SQL%'
+AND date = 20180115
+AND type = 'murder'
+/*Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".*/
+
+
+/*Identifying the first witness*/
+SELECT *
+FROM person
+WHERE address_street_name LIKE '%Northwestern Dr%'
+ORDER BY address_number DESC
+/*First Witness is Morty Schapiro*/
+
+--Morty Schapiro--
+SELECT *
+FROM person p
+JOIN drivers_license dl
+ON p.license_id=dl.id
+WHERE name = 'Morty Schapiro'
+
+person id	name	    license_id	address_number	address_street_name	ssn	drivers license id	age	height	eye_color	hair_color	gender	plate_number	car_make	car_model
+14887	Morty Schapiro    118009	              4919	              Northwestern Dr	111564949	118009	              64	84	blue	white	male	00NU00	Mercedes-Benz	E-Class
+
+--Income--
+SELECT annual_income
+FROM income
+WHERE ssn = 111564949
+
+NULL
+
+--statement--
+SELECT transcript
+FROM interview 
+WHERE person_id = 14887
+
+I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
+
+/*Identifying the second witness*/
+Select *
+FROM person
+Where name LIKE '%Annabel%'
+AND address_street_name LIKE '%Franklin Ave%'
+/*Second Witness is Annabel Miller*/
+
+--Annabel Miller--
+SELECT *
+FROM person p
+JOIN drivers_license dl
+ON p.license_id=dl.id
+WHERE name = 'Annabel Miller'
+
+person id	name	    license_id	address_number	address_street_name	ssn	drivers license id	age	height	eye_color	hair_color	gender	plate_number	car_make	car_model
+16371	Annabel Miller   490173	             103	             Franklin Ave	             318771143	490173	             35	65	green	brown	female	23AM98	Toyota	Yaris
+
+--income--
+SELECT *
+FROM income
+WHERE ssn = 318771143
+
+NULL
+
+--statement--
+SELECT transcript
+FROM interview 
+WHERE person_id = 16371
+
+I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
+
+--combined witness statement info--
+A Man shot the victim on 1/15/2018. He was seen with a gym bag from "Get Fit Now" gym, with a partial member ID of 48Z. The witness identified that only Gold members of that gym have bags like that. The suspect was then see fleeing in a vehicle, partial plate of "H42W".
+Another witness recognizes the suspect from their gym, having seen them 1 week prior on 1/9/2018.
