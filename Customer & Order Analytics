@@ -43,7 +43,7 @@ ON FEB.orderid=cust.order_id
 Where Feb.Quantity>2
 
 
-SECTION 1.8
+SECTION 1.9
 --1. How many locations are there in New York that sold more than 1 product in January?--
 SELECT count(distinct location)
 FROM BIT_DB.JanSales
